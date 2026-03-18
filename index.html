@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectPulse - Find Your Dream Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pulse-blue': '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text { 
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #EC4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen">
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-200">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 md:py-6">
+                <div class="text-2xl font-bold gradient-text">ProjectPulse</div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-pulse-blue font-medium transition-all">About</a>
+                    <a href="#features" class="text-gray-700 hover:text-pulse-blue font-medium transition-all">Features</a>
+                    <a href="#contact" class="text-gray-700 hover:text-pulse-blue font-medium transition-all">Contact</a>
+                </div>
+                
+                <a href="#contact" class="hidden md:inline-flex bg-pulse-blue text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl">Join a Project</a>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-all">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4 space-y-4 px-2">
+                <a href="#about" class="block py-2 text-gray-700 hover:text-pulse-blue font-medium">About</a>
+                <a href="#features" class="block py-2 text-gray-700 hover:text-pulse-blue font-medium">Features</a>
+                <a href="#contact" class="block py-2 text-gray-700 hover:text-pulse-blue font-medium">Contact</a>
+                <a href="#contact" class="block bg-pulse-blue text-white px-6 py-3 rounded-xl font-semibold text-center hover:bg-blue-700 transition-all">Join a Project</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="pt-24 pb-20 md:pt-32 md:pb-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text mb-6 leading-tight">
+                Find your dream team,<span class="block mt-4">build the future.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Connect with talented students for hackathons and final year projects. 
+                Our smart matching algorithm pairs you with the perfect teammates.
+            </p>
+            <a href="#contact" class="inline-block bg-pulse-blue text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-2xl hover:shadow-3xl hover:-translate-y-1 duration-300">
+                Join a Project Now
+            </a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Bridging Ideas to Reality</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Our mission: connect brilliant project ideas with the technical talent needed to make them real.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
+                        <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 text-center md:text-left">The Problem</h3>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Students have amazing ideas but lack specific skills like UI/UX design, backend development, or mobile expertise.
+                    </p>
+                </div>
+                <div class="space-y-6">
+                    <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 text-center md:text-left">Our Solution</h3>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        Intelligent matchmaking connects project leads with students based on verified skills and availability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-24 bg-gradient-to-b from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Everything You Need</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Built for college students tackling hackathons and final year projects.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="group p-8 rounded-2xl bg-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="text-4xl mb-4">🔍</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-pulse-blue transition-all">Smart Matching</h3>
+                    <p class="text-gray-600">AI algorithm pairs perfect teammates based on skills.</p>
+                </div>
+                <div class="group p-8 rounded-2xl bg-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="text-4xl mb-4">✅</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-pulse-blue transition-all">Verified Skills</h3>
+                    <p class="text-gray-600">Student profiles with verified technical skills.</p>
+                </div>
+                <div class="group p-8 rounded-2xl bg-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-pulse-blue transition-all">Real-time Chat</h3>
+                    <p class="text-gray-600">Instant messaging for team coordination.</p>
+                </div>
+                <div class="group p-8 rounded-2xl bg-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-pulse-blue transition-all">Mobile Ready</h3>
+                    <p class="text-gray-600">Manage projects from anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ready to Build Something Amazing?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Join thousands of students finding perfect project teammates.
+                </p>
+            </div>
+            
+            <div id="contact-form-container">
+                <form id="contactForm" class="max-w-lg mx-auto space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="contact-input" placeholder="Your full name" required>
+                        <span class="error-msg hidden text-red-600 text-sm mt-1"></span>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="contact-input" placeholder="your.email@college.edu" required>
+                        <span class="error-msg hidden text-red-600 text-sm mt-1"></span>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" class="contact-input" placeholder="Tell us about your project..." required></textarea>
+                        <span class="error-msg hidden text-red-600 text-sm mt-1"></span>
+                    </div>
+                    <button type="submit" class="w-full bg-pulse-blue text-white py-4 px-6 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 duration-300">
+                        Join ProjectPulse Today
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Success Message -->
+            <div id="success-message" class="max-w-md mx-auto bg-green-50 border border-green-200 rounded-2xl p-12 text-center hidden">
+                <div class="w-20 h-20 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-green-800 mb-4">Thank You!</h3>
+                <p class="text-green-700 mb-6">We'll get back to you within 24 hours.</p>
+                <button id="submit-another" class="bg-pulse-blue text-white px-8 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all">Submit Another</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                // Close mobile menu
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Form validation and submission
+        const form = document.getElementById('contactForm');
+        const formContainer = document.getElementById('contact-form-container');
+        const successMsg = document.getElementById('success-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Clear previous errors
+            document.querySelectorAll('.error-msg').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.contact-input').forEach(input => input.classList.remove('border-red-300', 'bg-red-50'));
+            
+            let isValid = true;
+            const email = document.getElementById('email').value;
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.querySelector('#email + .error-msg').textContent = 'Please enter a valid email';
+                document.querySelector('#email + .error-msg').classList.remove('hidden');
+                document.getElementById('email').classList.add('border-red-300', 'bg-red-50');
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // Show success
+                formContainer.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+                form.reset();
+            }
+        });
+
+        // Submit another button
+        document.getElementById('submit-another').addEventListener('click', function() {
+            successMsg.classList.add('hidden');
+            formContainer.classList.remove('hidden');
+        });
+
+        // Real-time input validation
+        document.querySelectorAll('.contact-input').forEach(input => {
+            input.addEventListener('input', function() {
+                this.classList.remove('border-red-300', 'bg-red-50');
+                const errorMsg = this.nextElementSibling;
+                if (errorMsg && !errorMsg.classList.contains('hidden')) {
+                    errorMsg.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
